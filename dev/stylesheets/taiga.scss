@@ -1,0 +1,90 @@
+@import '../../../acorns/acorns';
+@import '../../../heartwood/heartwood';
+@import '../bower_components/codemirror/lib/codemirror';
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+}
+
+
+.toggle__outer {
+  position: relative;
+  width: 70px;
+  height: 30px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 3px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.toggle__outer--on {
+  background: #7e7;
+}
+
+.toggle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  transition: transform .2s;
+  pointer-events: none;
+}
+
+.toggle--on {
+  -webkit-transform: translateX(39px);
+}
+
+.toggle__label {
+  font-size: 1.3em;
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.CodeMirror {
+  @include p;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.CodeMirror.cm-fat-cursor div.CodeMirror-cursor {
+  width: 1rem;
+}
+html {
+  @include document-type;
+}
+
+section {
+  @include module-type;
+}
+
+p {
+  @include p;
+}
+
+.h1 {
+  @include h(1, 300);
+  color: #2d2d2d;
+}
+
+a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+.title {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.note-area {
+  height: 100vh;
+  @include p(2);
+}
